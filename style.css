@@ -275,6 +275,58 @@ a:visited {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   PROJECT CARDS
+   ═══════════════════════════════════════════════════════════════ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.card {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-color: var(--color-brass);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+}
+
+.card:visited {
+    color: inherit;
+}
+
+.card__title {
+    font-family: var(--font-display);
+    font-size: var(--size-large);
+    color: var(--color-text-bright);
+    margin-bottom: var(--space-sm);
+}
+
+.card__description {
+    font-size: var(--size-small);
+    color: var(--color-text-dim);
+    line-height: var(--line-height);
+}
+
+.card__meta {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-brass-dark);
+    font-size: var(--size-small);
+    color: var(--color-brass);
+}
+
+/* ═══════════════════════════════════════════════════════════════
    DECORATIVE ELEMENTS
    ═══════════════════════════════════════════════════════════════ */
 

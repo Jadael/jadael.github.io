@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miniworld | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Project page specific styles */
+        .project-content {
+            max-width: 900px;
+        }
+
+        .project-content h1:first-child {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h2 {
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h3 {
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content p {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content ul,
+        .project-content ol {
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-lg);
+        }
+
+        .project-content li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-family: var(--font-body);
+            font-size: 0.9em;
+            color: var(--color-accent-bright);
+        }
+
+        .project-content pre {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            overflow-x: auto;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: var(--color-text);
+        }
+
+        .project-content blockquote {
+            border-left: 3px solid var(--color-brass);
+            padding-left: var(--space-md);
+            margin: var(--space-md) 0;
+            color: var(--color-text-dim);
+            font-style: italic;
+        }
+
+        .project-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: var(--space-md) 0;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .project-content hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--color-brass-dark) 20%,
+                var(--color-brass) 50%,
+                var(--color-brass-dark) 80%,
+                transparent
+            );
+            margin: var(--space-lg) 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--space-md);
+            color: var(--color-brass);
+            font-size: var(--size-small);
+        }
+
+        .back-link:hover {
+            color: var(--color-brass-light);
+        }
+
+        .back-link::before {
+            content: '← ';
+        }
+
+        .project-links {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin: var(--space-md) 0;
+        }
+
+        .project-links a {
+            padding: var(--space-sm) var(--space-md);
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+        }
+
+        .project-links a:hover {
+            background-color: rgba(155, 89, 182, 0.1);
+            border-color: var(--color-brass);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-md) 0;
+        }
+
+        .feature-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+        }
+
+        .feature-card h4 {
+            color: var(--color-accent-bright);
+            font-family: var(--font-body);
+            font-size: var(--size-large);
+            margin-bottom: var(--space-sm);
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: var(--size-small);
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Miniworld</h1>
+
+                <p class="text-dim">An experimental text-based virtual world combining classic MOO architecture with modern AI agents that possess memory, personality, and agency.</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/Jadael/Miniworld">GitHub</a>
+                </div>
+
+                <hr>
+
+                <h2>What Is Miniworld?</h2>
+
+                <p>Miniworld is a text-based simulation built in Godot 4.4 that bridges the gap between classic Multi-User Object-Oriented (MOO) virtual worlds and modern AI capabilities. It's a space where players can interact with autonomous AI agents that remember past interactions, develop personalities, and make their own decisions.</p>
+
+                <p>The project explores what happens when you give AI agents the same tools, commands, and agency as human players—creating a shared world where both can build, explore, and communicate on equal footing.</p>
+
+                <h2>Core Features</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>AI Agents</h4>
+                        <p>Autonomous agents with semantic memory, vector embeddings for intelligent recall, and just-in-time context generation. Two demo agents (Eliza and Moss) showcase different personalities.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>MOO-Style Commands</h4>
+                        <p>Classic text adventure commands unified for both players and AI: look, go, say, emote, and more. 29 commands across 7 categories.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Semantic Memory</h4>
+                        <p>Create persistent notes in a personal wiki. AI agents use vector embeddings to retrieve relevant memories based on context.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>World Building</h4>
+                        <p>Use @dig to create rooms, @exit to connect them. Build your own spaces and let AI agents explore them.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Debug Tools</h4>
+                        <p>Use @impersonate to see exactly what an AI agent perceives and how they reason about their decisions.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Persistent State</h4>
+                        <p>World state saves to human-readable markdown files. Everything is inspectable and modifiable.</p>
+                    </div>
+                </div>
+
+                <h2>Architecture Highlights</h2>
+
+                <h3>Component-Based Design</h3>
+
+                <p>Everything inherits from <code>WorldObject</code> with unique IDs. Functionality is added through components:</p>
+
+                <ul>
+                    <li><strong>Actor:</strong> Entities that can perform actions</li>
+                    <li><strong>Location:</strong> Spaces that contain other objects</li>
+                    <li><strong>Memory:</strong> Persistent storage and recall</li>
+                    <li><strong>Thinker:</strong> AI decision-making and reasoning</li>
+                    <li><strong>VectorStore:</strong> Semantic search capabilities</li>
+                </ul>
+
+                <h3>Key Systems</h3>
+
+                <ul>
+                    <li><strong>EventWeaver:</strong> Event-driven daemon that propagates observations to all relevant entities</li>
+                    <li><strong>Shoggoth:</strong> LLM task queue with Ollama integration for AI agent thinking</li>
+                    <li><strong>TextManager:</strong> Vault-based configuration system with hot-reload support</li>
+                    <li><strong>MarkdownVault:</strong> Persistent storage layer for world state and memories</li>
+                    <li><strong>WorldKeeper:</strong> Object registry managing lifecycle and relationships</li>
+                </ul>
+
+                <h2>Commands & Interaction</h2>
+
+                <p>Players and AI agents share the same command interface, organized into categories:</p>
+
+                <ul>
+                    <li><strong>Navigation:</strong> look, go, exits</li>
+                    <li><strong>Social:</strong> say, emote, whisper</li>
+                    <li><strong>Mental:</strong> think, note, recall (for memory management)</li>
+                    <li><strong>Self-Awareness:</strong> @my-profile, introspection tools</li>
+                    <li><strong>World-Building:</strong> @dig, @exit, @save</li>
+                    <li><strong>Discovery:</strong> help, commands, examine</li>
+                </ul>
+
+                <p>Commands can include optional reasoning annotations (<code>command | reason</code>) that stay private in memory, allowing agents to maintain internal monologue.</p>
+
+                <h2>The Vision</h2>
+
+                <p>Miniworld is an experiment in emergent narrative and AI agency. Rather than scripting behaviors, it gives AI agents the same fundamental tools as players and lets them decide how to use them. The result is a world where interactions feel organic, memories matter, and every agent develops their own unique perspective.</p>
+
+                <p>It's a sandbox for exploring questions like: What happens when AI agents can build their own spaces? How do they form relationships when they truly remember past interactions? What kinds of emergent behaviors arise when they have genuine agency?</p>
+
+                <h2>Technical Details</h2>
+
+                <ul>
+                    <li><strong>Engine:</strong> Godot 4.4</li>
+                    <li><strong>Language:</strong> GDScript</li>
+                    <li><strong>AI Backend:</strong> Ollama (local LLM integration)</li>
+                    <li><strong>License:</strong> AGPL-3.0</li>
+                    <li><strong>Storage:</strong> Human-readable markdown files</li>
+                </ul>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>

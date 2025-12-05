@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T's Musical Tools | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Project page specific styles */
+        .project-content {
+            max-width: 900px;
+        }
+
+        .project-content h1:first-child {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h2 {
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h3 {
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content p {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content ul,
+        .project-content ol {
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-lg);
+        }
+
+        .project-content li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-family: var(--font-body);
+            font-size: 0.9em;
+            color: var(--color-accent-bright);
+        }
+
+        .project-content pre {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            overflow-x: auto;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: var(--color-text);
+        }
+
+        .project-content blockquote {
+            border-left: 3px solid var(--color-brass);
+            padding-left: var(--space-md);
+            margin: var(--space-md) 0;
+            color: var(--color-text-dim);
+            font-style: italic;
+        }
+
+        .project-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: var(--space-md) 0;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .project-content hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--color-brass-dark) 20%,
+                var(--color-brass) 50%,
+                var(--color-brass-dark) 80%,
+                transparent
+            );
+            margin: var(--space-lg) 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--space-md);
+            color: var(--color-brass);
+            font-size: var(--size-small);
+        }
+
+        .back-link:hover {
+            color: var(--color-brass-light);
+        }
+
+        .back-link::before {
+            content: '← ';
+        }
+
+        .project-links {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin: var(--space-md) 0;
+        }
+
+        .project-links a {
+            padding: var(--space-sm) var(--space-md);
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+        }
+
+        .project-links a:hover {
+            background-color: rgba(155, 89, 182, 0.1);
+            border-color: var(--color-brass);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .module-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-md) 0;
+        }
+
+        .module-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+        }
+
+        .module-card h4 {
+            color: var(--color-accent-bright);
+            font-family: var(--font-body);
+            font-size: var(--size-large);
+            margin-bottom: var(--space-sm);
+        }
+
+        .module-card p {
+            margin-bottom: 0;
+            font-size: var(--size-small);
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>T's Musical Tools</h1>
+
+                <p class="text-dim">A collection of esoteric VCV Rack modules for manipulating seeded RNG and polyphonic signals in interesting ways.</p>
+
+                <div class="project-links">
+                    <a href="https://library.vcvrack.com/TMT">VCV Library</a>
+                    <a href="https://github.com/Jadael/TMT">GitHub</a>
+                    <a href="https://hillhand.itch.io/tmt">itch.io</a>
+                </div>
+
+                <hr>
+
+                <h2>Design Philosophy</h2>
+
+                <p>TMT is a toolkit focused on control voltage manipulation rather than audio generation. The modules feature <strong>no knobs, only jacks</strong>—all control happens via CV inputs. This design encourages a pure modular patching approach where everything is dynamic and automatable.</p>
+
+                <p>While primarily designed for routing signals and working with control voltages, most modules can operate at audio rate for experimental sound design.</p>
+
+                <h2>The Modules</h2>
+
+                <div class="module-list">
+                    <div class="module-card">
+                        <h4>Spellbook</h4>
+                        <p>Tracker-style plaintext sequencer using RhythML notation. Bring the power of text-based composition to your modular patches.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Page</h4>
+                        <p>Expander module for Spellbook that extends column capacity for more complex sequences.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Shuffle</h4>
+                        <p>Randomly reorder polyphonic signal channels with seedable, deterministic randomization.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Sort</h4>
+                        <p>Rearrange and filter polyphonic cables using spreadsheet-like functions and CV control.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Seed</h4>
+                        <p>Generate 16 reproducible random voltages from a seed input. Perfect for creating controlled chaos.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Ouroboros</h4>
+                        <p>Step sequentially through polyphonic input channels, turning any poly cable into a sequence.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Append</h4>
+                        <p>Combine up to 16 input signals into a selectable polyphonic output with CV-controlled subsetting.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Stats</h4>
+                        <p>Calculate statistical measures (mean, median, mode, variance, etc.) of polyphonic signals.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Calendar</h4>
+                        <p>Generate time and date-based LFO-like control voltages synced to your system clock.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Sight</h4>
+                        <p>Oscilloscope with logarithmic, non-linear time scaling for multi-scale signal visualization.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Spine</h4>
+                        <p>Provides frequently-used constant CV offsets, inverse, and reverse operations.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <h4>Blankt</h4>
+                        <p>Resizable blank panel to organize your rack aesthetically.</p>
+                    </div>
+                </div>
+
+                <h2>Key Features</h2>
+
+                <ul>
+                    <li><strong>Polyphonic Focus:</strong> Deep support for VCV Rack's polyphonic cables with tools to manipulate, analyze, and route them</li>
+                    <li><strong>Seedable Randomization:</strong> Deterministic random generation that can be controlled and reproduced</li>
+                    <li><strong>CV-Only Control:</strong> No knobs—every parameter is controlled via CV inputs for maximum modularity</li>
+                    <li><strong>Text-Based Sequencing:</strong> RhythML notation brings the efficiency of tracker interfaces to modular synthesis</li>
+                    <li><strong>Open Source:</strong> GPL-3.0 licensed, freely available on GitHub</li>
+                </ul>
+
+                <h2>Status</h2>
+
+                <p>Current version: <strong>2.2.0</strong> (actively maintained)</p>
+                <p>Available for Windows, macOS, and Linux through the official VCV Rack plugin library.</p>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>

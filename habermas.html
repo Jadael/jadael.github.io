@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recursive Habermas Machine | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Project page specific styles */
+        .project-content {
+            max-width: 900px;
+        }
+
+        .project-content h1:first-child {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h2 {
+            margin-top: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content h3 {
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content p {
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content ul,
+        .project-content ol {
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-lg);
+        }
+
+        .project-content li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .project-content code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-family: var(--font-body);
+            font-size: 0.9em;
+            color: var(--color-accent-bright);
+        }
+
+        .project-content pre {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            overflow-x: auto;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: var(--color-text);
+        }
+
+        .project-content blockquote {
+            border-left: 3px solid var(--color-brass);
+            padding-left: var(--space-md);
+            margin: var(--space-md) 0;
+            color: var(--color-text-dim);
+            font-style: italic;
+        }
+
+        .project-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: var(--space-md) 0;
+            box-shadow: var(--shadow-lifted);
+        }
+
+        .project-content hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--color-brass-dark) 20%,
+                var(--color-brass) 50%,
+                var(--color-brass-dark) 80%,
+                transparent
+            );
+            margin: var(--space-lg) 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--space-md);
+            color: var(--color-brass);
+            font-size: var(--size-small);
+        }
+
+        .back-link:hover {
+            color: var(--color-brass-light);
+        }
+
+        .back-link::before {
+            content: '← ';
+        }
+
+        .project-links {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin: var(--space-md) 0;
+        }
+
+        .project-links a {
+            padding: var(--space-sm) var(--space-md);
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+        }
+
+        .project-links a:hover {
+            background-color: rgba(155, 89, 182, 0.1);
+            border-color: var(--color-brass);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-md) 0;
+        }
+
+        .feature-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+        }
+
+        .feature-card h4 {
+            color: var(--color-accent-bright);
+            font-family: var(--font-body);
+            font-size: var(--size-large);
+            margin-bottom: var(--space-sm);
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: var(--size-small);
+        }
+
+        .principle-box {
+            background-color: rgba(155, 89, 182, 0.1);
+            border-left: 3px solid var(--color-accent);
+            padding: var(--space-md);
+            margin: var(--space-md) 0;
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Recursive Habermas Machine</h1>
+
+                <p class="text-dim">An AI-assisted deliberation tool that helps diverse groups identify consensus statements through democratic voting, based on Google DeepMind research.</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/Jadael/Recursive-Habermas-Machine">GitHub</a>
+                </div>
+
+                <hr>
+
+                <h2>What Is It?</h2>
+
+                <p>The Recursive Habermas Machine implements research from Google DeepMind's 2024 <em>Science</em> paper on AI-mediated consensus building. It's a tool designed to help diverse groups—whether colleagues, stakeholders, or community members—find common ground on complex issues.</p>
+
+                <h2>How It Works</h2>
+
+                <ol>
+                    <li><strong>Collection:</strong> Participants provide their individual perspectives on a question or issue</li>
+                    <li><strong>Synthesis:</strong> An LLM generates candidate consensus statements that attempt to capture the group's shared values</li>
+                    <li><strong>Prediction:</strong> The system predicts how each participant would rank each candidate statement</li>
+                    <li><strong>Selection:</strong> The Schulze voting method (Condorcet-compliant and strategically robust) identifies the statement with broadest appeal</li>
+                    <li><strong>Recursion:</strong> For groups larger than 12, the process repeats hierarchically to maintain computational feasibility</li>
+                </ol>
+
+                <h2>Key Features</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Local & Private</h4>
+                        <p>Runs entirely on local inference via Ollama. No cloud APIs, no data leaving your machine.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Full Transparency</h4>
+                        <p>See exact prompts, LLM responses, and voting matrices. No black boxes—understand how consensus was reached.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Democratic Voting</h4>
+                        <p>Uses Schulze method, a Condorcet-compliant system that's strategically robust and reflects true group preferences.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Scalable</h4>
+                        <p>Recursive processing handles groups of any size while maintaining computational tractability.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>GUI Interface</h4>
+                        <p>Built with CustomTkinter for an accessible, user-friendly experience.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Open Source</h4>
+                        <p>AGPLv3 licensed—modifications deployed as network services must share source code.</p>
+                    </div>
+                </div>
+
+                <h2>Design Philosophy</h2>
+
+                <div class="principle-box">
+                    <h3>Transparency Over Optimization</h3>
+                    <p>The system prioritizes understanding <em>how</em> consensus was reached over simply producing an output. Users can inspect every step of the process.</p>
+                </div>
+
+                <div class="principle-box">
+                    <h3>Questions, Not Decisions</h3>
+                    <p>The tool deliberately restricts itself to "questions and opinions, not proposals and decisions." It informs human deliberation but preserves human authority over final determinations.</p>
+                </div>
+
+                <div class="principle-box">
+                    <h3>LLMs Are Unreliable Tools</h3>
+                    <p>Rather than treating AI as infallible, the system acknowledges LLMs as unreliable and uses multi-retry mechanisms and transparent outputs to work around their limitations.</p>
+                </div>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>
