@@ -69,7 +69,7 @@
     --texture-noise:        none;  /* url('assets/noise.png') */
 
     /* ─── Layout ─── */
-    --content-width:        800px;
+    --content-width:        1000px;
     --panel-width:          400px;
     --panel-min-width:      280px;
 }
@@ -371,6 +371,267 @@ a:visited {
         transparent 40%,
         rgba(0, 0, 0, 0.4) 100%
     );
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PROJECT PAGE STYLES
+   ═══════════════════════════════════════════════════════════════ */
+.project-content {
+    max-width: 900px;
+}
+
+.project-content h1:first-child {
+    margin-bottom: var(--space-md);
+}
+
+.project-content h2 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.project-content h3 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.project-content p {
+    margin-bottom: var(--space-md);
+}
+
+.project-content ul,
+.project-content ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+.project-content li {
+    margin-bottom: var(--space-sm);
+}
+
+.project-content code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 0.9em;
+    color: var(--color-accent-bright);
+}
+
+.project-content pre {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    overflow-x: auto;
+    margin-bottom: var(--space-md);
+}
+
+.project-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: var(--color-text);
+}
+
+.project-content blockquote {
+    border-left: 3px solid var(--color-brass);
+    padding-left: var(--space-md);
+    margin: var(--space-md) 0;
+    color: var(--color-text-dim);
+    font-style: italic;
+}
+
+.project-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: var(--space-md) 0;
+    box-shadow: var(--shadow-lifted);
+}
+
+.project-content hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-brass-dark) 20%,
+        var(--color-brass) 50%,
+        var(--color-brass-dark) 80%,
+        transparent
+    );
+    margin: var(--space-lg) 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: var(--space-md);
+    color: var(--color-brass);
+    font-size: var(--size-small);
+}
+
+.back-link:hover {
+    color: var(--color-brass-light);
+}
+
+.back-link::before {
+    content: '← ';
+}
+
+.project-links {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin: var(--space-md) 0;
+}
+
+.project-links a {
+    padding: var(--space-sm) var(--space-md);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.project-links a:hover {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-color: var(--color-brass);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Card grids for project-specific content */
+.module-list,
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.module-card,
+.feature-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+}
+
+.module-card h4,
+.feature-card h4 {
+    color: var(--color-accent-bright);
+    font-family: var(--font-body);
+    font-size: var(--size-large);
+    margin-bottom: var(--space-sm);
+}
+
+.module-card p,
+.feature-card p {
+    margin-bottom: 0;
+    font-size: var(--size-small);
+}
+
+/* Special boxes for highlighting principles, examples, etc */
+.principle-box,
+.example-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.principle-box {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left: 3px solid var(--color-accent);
+}
+
+.example-box h4 {
+    color: var(--color-brass);
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-body);
+}
+
+/* Definition lists for format specs */
+.format-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-sm) var(--space-md);
+    margin: var(--space-md) 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-brass-dark);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+}
+
+.format-grid dt {
+    font-weight: bold;
+    color: var(--color-accent-bright);
+    font-family: var(--font-body);
+}
+
+.format-grid dd {
+    color: var(--color-text-dim);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE STYLES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Centered image with breathing room */
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Featured/hero image - larger, more prominent */
+.img-featured {
+    border: 2px solid var(--color-brass);
+    box-shadow: var(--shadow-lifted), var(--shadow-glow);
+    margin: var(--space-lg) 0;
+}
+
+/* Inline/thumbnail - smaller, can sit alongside text */
+.img-inline {
+    max-width: 300px;
+    float: right;
+    margin: 0 0 var(--space-md) var(--space-md);
+}
+
+.img-inline-left {
+    max-width: 300px;
+    float: left;
+    margin: 0 var(--space-md) var(--space-md) 0;
+}
+
+/* Pixel art - crisp edges */
+.img-pixel {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Screenshot style - darker border, inset shadow */
+.img-screenshot {
+    border: 1px solid var(--color-brass-dark);
+    box-shadow: var(--shadow-inset), var(--shadow-subtle);
+}
+
+/* Gallery grid for multiple images */
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.img-gallery img {
+    margin: 0;
+    width: 100%;
+}
+
+/* Clear floats after inline images */
+.clear {
+    clear: both;
 }
 
 /* ═══════════════════════════════════════════════════════════════
