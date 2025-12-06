@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taasen | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Taasen</h1>
+
+                <p class="text-dim">An abstract strategy game from another universe.</p>
+
+                <div class="project-links">
+                    <a href="https://www.thegamecrafter.com/games/taasen">Buy on Game Crafter</a>
+                    <a href="https://unicornjelly.com/taasen1.html">Original Rules</a>
+                </div>
+
+                <hr>
+
+                <p>Jennifer Diane Reitz invented Taasen as part of the cultural fabric of Tryslmaistan, the alien cosmos where her webcomic <a href="https://unicornjelly.com/">Unicorn Jelly</a> takes place. Tryslmaistan has different physics than our universe, different societies, different traditions. Taasen is a game the people there play.</p>
+
+                <p>You can read Jennifer's <a href="https://unicornjelly.com/taasen1.html">guide to Taasen here</a>.</p>
+
+                <h2>Original Set</h2>
+
+                <p>I originally found Taasen as a teenager while reading the <a href="https://www.projectrho.com/public_html/rocket/futuregames.php">Future Games section</a> on the Atomic Rockets site. For whatever reason the idea of the three-way fight controlled by two players really stuck with me, and I made a wooden board and sculpey pieces.</p>
+
+                <img src="images/taasen/original_set.jpg" alt="Original handmade wooden Taasen board" class="img-center">
+
+                <p>I don't know what happened those original pieces, but I still have the board. Much later on, when we got our first 3d printer, I designed and made pieces for it. I actually <a href="https://thangs.com/designer/hillhand/3d-model/Taasen%20Pieces-1454115">sell these pieces</a> too.</p>
+
+                <div class="img-gallery">
+                    <img src="images/taasen/printed_pieces.jpg" alt="3D printed Taasen pieces">
+                    <img src="images/taasen/original_set_with_printed_pieces.jpg" alt="Original wooden board with 3D printed pieces">
+                </div>
+
+                <h2>Game Crafter Edition</h2>
+
+                <p>Game Crafter added a way to lasercut custom parts, and I felt like an acrylic board would look cool. I first mocked it up in Blender, including thinking about how the pieces could look.</p>
+
+                <p>At first the idea was actually to use printed d4s for the pieces, with a rules hint hidden on the bottoms. The icons are drawn in <a href="https://jplebreton.com/playscii/">Playscii</a>.</p>
+
+                <div class="img-gallery">
+                    <img src="images/taasen/d4.jpg" alt="D4 die concept with Playscii icons">
+                    <img src="images/taasen/d4_rules_hint.jpg" alt="D4 die bottom showing rules hint">
+                </div>
+
+                <p>However, each die costed like $4 which felt like too much, and there was a lot of waste space on the acrylic sheet, which pieces could be cut from.</p>
+
+                <img src="images/taasen/square_pieces.jpg" alt="Square piece design concept" class="img-center">
+
+                <p>I first tried making them all the same shape, but decided that different shapes looked better. And there was still enough leftover space in the acrylic to include blank spares, and a "card" for rules quick reference.</p>
+
+                <img src="images/taasen/taasen_render.png" alt="3D render of final Taasen design" class="img-center">
+
+                <h2>The Final Product</h2>
+                
+                <p>Ordered the prototype and this is how it came out!</p>
+                
+                <img src="images/taasen/hero.jpg" alt="Taasen game with acrylic board and laser-cut pieces" class="img-featured img-center">
+
+                <p>Most of the work was drawing the cutting pattern and making the box art and store page assets.</p>
+
+                <p>This is <a href="https://www.thegamecrafter.com/games/taasen">available for sale from The Game Crafter</a>, with Jennifer's permission.</p>
+
+                <div class="img-gallery">
+                    <img src="images/taasen/showcase_1.jpg" alt="Taasen game box">
+                    <img src="images/taasen/showcase_2.jpg" alt="Taasen board close-up">
+                    <img src="images/taasen/showcase_3.jpg" alt="Taasen pieces detail">
+                    <img src="images/taasen/showcase_4.jpg" alt="Taasen game setup">
+                    <img src="images/taasen/showcase_5.jpg" alt="Taasen gameplay">
+                </div>
+
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+            
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Image embiggen overlay -->
+    <div class="img-overlay" id="imgOverlay">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        // Simple image embiggen - click any project image to enlarge
+        const overlay = document.getElementById('imgOverlay');
+        const overlayImg = overlay.querySelector('img');
+        const projectImages = document.querySelectorAll('.project-content img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Click anywhere to close
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

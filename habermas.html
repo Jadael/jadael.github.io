@@ -105,5 +105,30 @@
             <a href="index.html" class="back-link">Back to Home</a>
         </div>
     </main>
+
+    <!-- Image embiggen overlay -->
+    <div class="img-overlay" id="imgOverlay">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        // Simple image embiggen - click any project image to enlarge
+        const overlay = document.getElementById('imgOverlay');
+        const overlayImg = overlay.querySelector('img');
+        const projectImages = document.querySelectorAll('.project-content img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Click anywhere to close
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
