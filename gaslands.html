@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gaslands | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Gaslands</h1>
+
+                <p class="text-dim">Kitbashed toy cars for post-apocalyptic vehicular combat.</p>
+
+                <div class="project-links">
+                    <a href="https://planetsmashergames.com/gaslands/about/">Official Gaslands Site</a>
+                </div>
+
+                <hr>
+
+                <p><a href="https://planetsmashergames.com/gaslands/about/">Gaslands</a> is a tabletop system focused around the use of kitbashed Hot Wheels/Matchbox style toy cars, making it a very accessible and affordable way to get a lot of the satisfaction of "painting miniatures" without spending hundreds or thousands of dollars on "official models".</p>
+
+                <p>These are some of my builds from 2018.</p>
+
+                <div class="img-gallery">
+                    <img src="images/gaslands/20181104_193736.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181105_184858.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181105_215827.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181106_205135.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181107_185441.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181018_192036.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181113_213830.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181113_215316.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181116_165912.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181117_160519.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/20181219_222110.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/3864969610570744148.jpg" alt="Gaslands kitbashed car">
+                    <img src="images/gaslands/8612703495206189045.jpg" alt="Gaslands kitbashed car">
+                </div>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Image embiggen overlay -->
+    <div class="img-overlay" id="imgOverlay">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        // Simple image embiggen - click any project image to enlarge
+        const overlay = document.getElementById('imgOverlay');
+        const overlayImg = overlay.querySelector('img');
+        const projectImages = document.querySelectorAll('.project-content img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Click anywhere to close
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
