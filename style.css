@@ -241,9 +241,15 @@ a:visited {
    ═══════════════════════════════════════════════════════════════ */
 .link-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
+}
+
+@media (max-width: 600px) {
+    .link-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .link-list__item {

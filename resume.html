@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume | T. Hill-Hand</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .resume-content {
+            max-width: 900px;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .resume-header h1 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .resume-intro {
+            font-size: var(--size-small);
+            line-height: var(--line-height);
+            max-width: 700px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .resume-section {
+            margin-bottom: var(--space-xl);
+        }
+
+        .resume-section h2 {
+            border-bottom: 1px solid var(--color-brass-dark);
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .job {
+            margin-bottom: var(--space-lg);
+        }
+
+        .skill-category {
+            margin-bottom: var(--space-lg);
+        }
+
+        .skill-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            margin-bottom: var(--space-sm);
+        }
+
+        .job-title {
+            font-family: var(--font-body);
+            font-size: var(--size-large);
+            color: var(--color-accent-bright);
+            font-weight: bold;
+        }
+
+        .job-company {
+            color: var(--color-text-bright);
+            font-size: var(--size-large);
+        }
+
+        .job-subtitle {
+            color: var(--color-text-dim);
+            font-size: var(--size-small);
+            font-style: italic;
+        }
+
+        .job-dates {
+            color: var(--color-brass);
+            font-size: var(--size-small);
+        }
+
+        .job-responsibilities {
+            margin-top: var(--space-sm);
+            padding-left: var(--space-lg);
+        }
+
+        .job-responsibilities li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .skill-category h3 {
+            color: var(--color-brass);
+            font-family: var(--font-body);
+            font-size: var(--size-base);
+            margin-bottom: var(--space-xs);
+            font-weight: bold;
+        }
+
+        .skill-list {
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            color: var(--color-brass);
+            font-size: var(--size-xlarge);
+        }
+
+        .employer-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-brass-dark);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .employer-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .employer-header {
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--color-brass-dark);
+        }
+
+        .employer-name {
+            color: var(--color-text-bright);
+            font-size: var(--size-xlarge);
+            margin-bottom: var(--space-xs);
+        }
+
+        .employer-subtitle {
+            color: var(--color-text-dim);
+            font-size: var(--size-small);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="content resume-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <div class="resume-header">
+                    <h1>T. Hill-Hand</h1>
+                    <div style="margin-bottom: var(--space-md);">
+                        <a href="mailto:hillhand&#64;gmail&#46;com">hillhand&#64;gmail&#46;com</a> ·
+                        <a href="https://www.linkedin.com/in/t-hill-hand-358b3631/">LinkedIn</a> ·
+                        <a href="https://github.com/Jadael">GitHub</a> ·
+                        <a href="https://www.youtube.com/@HillHand">YouTube</a>
+                    </div>
+                    <p class="resume-intro">
+                        I explore, map, and build systems. I work to bridge the technical and human — designing information architectures that remain useful even when imperfectly maintained or partially remembered.
+                    </p>
+                    <p class="resume-intro">
+                        Thirteen years supporting customer experience operations taught me that the best technical solutions fail without stakeholder buy-in, and the best laid plans fail without good tools.
+                    </p>
+                    <p class="resume-intro text-accent">
+                        My goal is sustainable, healthy work towards universally accessible knowledge and artifacts that will still be of value to people living ten thousand years from now.
+                    </p>
+                    <p class="resume-intro text-dim">
+                        My philosophy is tool and framework agnostic: focus on underlying principles and transferable solutions rather than platform-specific implementations.
+                    </p>
+                </div>
+
+                <div class="section-divider">⸸</div>
+
+                <div class="resume-section">
+                    <h2>Skills & Competencies</h2>
+
+                    <div class="skill-category">
+                        <h3>Knowledge Systems & Architecture</h3>
+                        <p class="skill-list">Enterprise knowledge base design and taxonomy development, content governance frameworks, search optimization, controlled vocabulary and metadata strategy</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Process & Project Management</h3>
+                        <p class="skill-list">Lean Six Sigma, stakeholder coordination, requirements gathering, workflow automation design, training development, creating actionable tools for regulatory and technical requirements</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data & Analytics</h3>
+                        <p class="skill-list">Advanced Smartsheet, SQL queries, CSV/JSON processing, API integration, tidy data principles, data quality management</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>AI & Automation</h3>
+                        <p class="skill-list">Conversational AI (Cognigy platform), user intent management, workflow automation, cross-system orchestration</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Technical & Creative</h3>
+                        <p class="skill-list">Godot Engine, Blender 3D, Python scripting, HTML/CSS, markdown systems, version control, Adobe suite, video editing, game modding, procedural generation, open-source audio software development</p>
+                    </div>
+                </div>
+
+                <div class="section-divider">⸸</div>
+
+                <div class="resume-section">
+                    <h2>Work Experience</h2>
+
+                    <div class="employer-card">
+                        <div class="employer-header">
+                            <div class="employer-name">Foundever (formerly Sitel Group)</div>
+                            <div class="employer-subtitle">Customer experience technology</div>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">EverConnect Architect, North America</div>
+                                <div class="job-dates">July 2020 - October 2024</div>
+                            </div>
+                            <p style="font-style: italic; color: var(--color-text-dim); margin-bottom: var(--space-sm);">After deployment of global intranet, recruited for newly created Architect role to serve US & Canada operations (serving a peak of 20,000+ associates across 40+ locations)</p>
+                            <ul class="job-responsibilities">
+                                <li>Intranet architecture, content strategies, and governance frameworks for regional and local teams</li>
+                                <li>Trained and supported regional content owners, administrators, and power users</li>
+                                <li>Created and optimize Smartsheet solutions for project tracking, data analysis, and workflow automation</li>
+                                <li>Led cross-functional initiatives spanning multiple departments, clients, and geographic regions</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Continuous Improvement Manager, North America</div>
+                                <div class="job-dates">September 2019 - July 2020</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Consulted and led Lean Six Sigma projects for internal operations and client program teams</li>
+                                <li>Built and maintained project management tools and processes for the Continuous Improvement department</li>
+                                <li><strong>Global Intranet:</strong> Served as core member of project "small tent" for conceptualization, requirements gathering, vendor evaluation, and deployment
+                                    <ul style="margin-top: var(--space-xs);">
+                                        <li>Stakeholder in Request-For-Proposal process, reviewed multiple market solutions</li>
+                                        <li>Identified security and compliance requirements that necessitated in-house development</li>
+                                        <li>Contributed to platform design, information architecture, and rollout strategy as Process Improvement PM</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Operational Reporting Analyst, Las Vegas</div>
+                                <div class="job-dates">April 2013 - September 2019</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Financial planning & analysis, data management and logistics, internal communications</li>
+                                <li>Managed and mentored inter-department technical support staff (workforce management, quality assurance, reporting analysts)</li>
+                                <li>Developed automated reporting solutions and data visualization dashboards</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Special Customer Support, Retail Client</div>
+                                <div class="job-dates">June 2012 - April 2013</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Resolved complex escalated customer issues including Better Business Bureau complaints, lost shipments, injury claims, and executive correspondence</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="employer-card">
+                        <div class="employer-header">
+                            <div class="employer-name">Freelance</div>
+                            <div class="employer-subtitle">Graphic design & art</div>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Graphic Designer & Artist</div>
+                                <div class="job-dates">January 2009 - June 2012</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Graphic design, illustration, and digital art for various clients</li>
+                                <li>Logo design, branding, print materials, and web graphics</li>
+                                <li>Commission work and personal creative projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="employer-card">
+                        <div class="employer-header">
+                            <div class="employer-name">Art From the Heart</div>
+                            <div class="employer-subtitle">Art, printing & photography</div>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Printer, Photographer, Designer</div>
+                                <div class="job-dates">January 2006 - January 2009</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Specialized in giclee (inkjet printing on canvas) reproductions of paintings</li>
+                                <li>Managed client relations, photography, pre-press, and printing as sole employee</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="employer-card">
+                        <div class="employer-header">
+                            <div class="employer-name">NWTEC</div>
+                            <div class="employer-subtitle">Residential Construction</div>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <div class="job-title">Crew Leader</div>
+                                <div class="job-dates">December 2005 - December 2006</div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Led crew of 2-4, implementing and maintaining Storm Water Pollution Prevention Plan measures across construction sites</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-divider">⸸</div>
+
+                <div class="resume-section">
+                    <h2>Education and Certifications</h2>
+                    <ul>
+                        <li>Media Arts & Animation, Art Institute of Las Vegas (3.5 years completed)</li>
+                        <li>Six Sigma Green Belt Certification</li>
+                    </ul>
+                </div>
+            </article>
+
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+</body>
+</html>
