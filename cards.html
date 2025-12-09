@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playing Cards | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Playing Cards</h1>
+
+                <p class="text-dim">Custom poker decks printed through The Game Crafter.</p>
+
+                <hr>
+
+                <h2>Old West Poker Cards</h2>
+
+                <div class="project-links">
+                    <a href="https://www.thegamecrafter.com/games/old-west-poker-cards">Buy on Game Crafter</a>
+                </div>
+
+                <p>A weathered, vintage-style poker deck inspired by 19th century American playing cards. The face cards feature period-appropriate illustrations in the classic European court card style, while every card has an aged, distressed texture.</p>
+
+                <p>The deck includes standard 52 cards plus jokers and reference cards for poker hand rankings and popular game variants like Texas Hold'em, Omaha, and Five Card Draw.</p>
+
+                <img src="images/cards/oldwest_banner.jpg" alt="Old West Poker Cards banner" class="img-featured img-center">
+
+                <div class="img-gallery">
+                    <img src="images/cards/oldwest_photo1.jpg" alt="Old West cards spread on table">
+                    <img src="images/cards/oldwest_photo2.jpg" alt="Old West deck with tuck box">
+                    <img src="images/cards/oldwest_photo3.jpg" alt="Old West cards showing royal flush">
+                    <img src="images/cards/oldwest_jack.jpg" alt="Jack of Hearts card design">
+                </div>
+
+                <p class="text-dim" style="margin-top: var(--space-md);">Originally designed in 2011.</p>
+
+                <hr>
+
+                <h2>Playscii Cards</h2>
+
+                <div class="project-links">
+                    <a href="https://www.thegamecrafter.com/games/playscii-cards">Buy on Game Crafter</a>
+                    <a href="https://jplebreton.com/playscii/">Playscii by JP LeBreton</a>
+                </div>
+
+                <p>A pixel-art playing card deck created entirely in <a href="https://jplebreton.com/playscii/">Playscii</a>, JP LeBreton's ASCII/ANSI art program. Every element is built from text characters, giving the cards a distinctly retro-digital aesthetic.</p>
+
+                <p>The face cards feature original character designs rendered in chunky pixels, while the number cards use stylized pip arrangements. The back design features colorful pixel creatures.</p>
+
+                <img src="images/cards/playscii_logo.png" alt="Playscii Cards logo" class="img-center img-pixel">
+
+                <div class="img-gallery">
+                    <img src="images/cards/playscii_photo1.jpg" alt="Playscii cards showing a poker hand">
+                    <img src="images/cards/playscii_photo2.jpg" alt="Playscii deck spread showing face cards">
+                    <img src="images/cards/playscii_photo3.jpg" alt="Playscii cards showing pip designs">
+                </div>
+
+                <p class="text-dim" style="margin-top: var(--space-md);">Created in 2024.</p>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Image embiggen overlay -->
+    <div class="img-overlay" id="imgOverlay">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        // Simple image embiggen - click any project image to enlarge
+        const overlay = document.getElementById('imgOverlay');
+        const overlayImg = overlay.querySelector('img');
+        const projectImages = document.querySelectorAll('.project-content img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Click anywhere to close
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
