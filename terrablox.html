@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terrablox | Internet Witch</title>
+
+    <!-- Fonts: Monospace for terminal feel, serif for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="content project-content">
+            <a href="index.html" class="back-link">Back to Home</a>
+
+            <article class="panel">
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+
+                <h1>Terrablox</h1>
+
+                <img src="images/terrablox/banner.png" alt="Terrablox logo over a voxel forest scene with pixel-art character standees" class="img-featured img-center">
+
+                <p class="text-dim">A voxel-based virtual tabletop. Everything is made of colored blocks, so it's fast to build a scene and it's not tied to any one art style, genre, or scale.</p>
+
+                <div class="project-links">
+                    <a href="https://store.steampowered.com/app/4842910/Terrablox/">Steam</a>
+                    <a href="https://hillhand.itch.io/terrablox">itch.io</a>
+                </div>
+
+                <hr>
+
+                <h2>What Is Terrablox?</h2>
+
+                <p>Terrablox is a virtual tabletop where everything is voxels. Terrain, buildings, ruins, whole cities, all built out of colored blocks instead of pre-made assets. Because it's all just blocks, you're not stuck with one art style or scale. The same tools that build a crumbling dungeon can build a modern city block.</p>
+
+                <img src="images/terrablox/nightcity.png" alt="Foggy nighttime modern city block with lit windows and streetlights" class="img-screenshot img-center">
+
+                <p>Left-click painting and a set of 3D shape tools (ramps, pyramids, cylinders, hills) make it quick to throw a scene together. Then you can layer in fog of war, lighting, and tokens without switching to a different program.</p>
+
+                <img src="images/terrablox/terrain.png" alt="Large voxel terrain scene with mountains, ruined fortresses, rivers, and forests" class="img-screenshot img-center">
+
+                <h2>Core Features</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Building Tools</h4>
+                        <p>Fast voxel construction with left-click painting, brush shapes (line, rect, pyramid, cone, sphere, ramp, roof), fill, eyedropper, and layer stacking.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>3D Fog of War</h4>
+                        <p>Real 3D line of sight per team, not a 2D circle pasted on a flat map. Vision can be shared across a team or kept individual.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Voxel Lighting</h4>
+                        <p>Light actually propagates through the grid: sunlight, ambient light from the sky, colored and flickering emitter blocks, and lights carried by tokens.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Tokens &amp; Standees</h4>
+                        <p>Import any image as a standee, scale it to whatever size you need, and track HP, AC, conditions, and your own custom stat templates.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Copy/Paste &amp; Library</h4>
+                        <p>Select a volume and copy it as plain text, then paste it anywhere, rotated or flipped if you need. Save the ones you like to a reusable library.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>MagicaVoxel Import</h4>
+                        <p>Bring in <code>.vox</code> models directly, no conversion step. They come in as a new scene or as a pasteable slab.</p>
+                    </div>
+                </div>
+
+                <img src="images/terrablox/dungeon.png" alt="Dark dungeon scene lit only by colored emitter blocks and torches" class="img-screenshot img-center">
+
+                <h2>Built for Running the Table</h2>
+
+                <p>There's a free orbit camera, orthographic, isometric with five pitch levels, top-down, and a first-person view for walking a scene at eye level. There's a cut-plane too, to peel back the roof or upper floors to see or work on interior spaces.</p>
+
+                <p>GM tools cover the usual table needs: a turn tracker, notes at both the campaign and scene level, a dice roller, and per-player permissions. There's also a "prop" system: any selectionof blocks can be turned into an object that moves and rotates independently, like a door, a cart, or a piece of siege equipment.</p>
+
+                <p>It's all just blocks, so the same tools work at any scale. A wind-scoured ruin, a cramped apartment interior, a stark black-and-white storefront, whatever the scene calls for.</p>
+
+                <div class="img-gallery">
+                    <img src="images/terrablox/building.png" alt="Build mode: painting rectangular and hollow voxel shapes with measured dimensions" class="img-screenshot">
+                    <img src="images/terrablox/city.png" alt="Ruined, weathered voxel landscape with crumbling white structures" class="img-screenshot">
+                    <img src="images/terrablox/colorful.png" alt="Close-up of a colorful abstract voxel scene showing block detail" class="img-screenshot">
+                    <img src="images/terrablox/interior.png" alt="Detailed apartment interior built from voxel blocks, with a character token" class="img-screenshot">
+                    <img src="images/terrablox/storefront.png" alt="Stark black-and-white voxel roadside storefront exterior" class="img-screenshot">
+                </div>
+
+                <h2>Multiplayer</h2>
+
+                <p>The Steam and itch.io versions are the same game, but they handle multiplayer differently. Multiplayer is GM-authoritative either way, and block edits, token moves, markers, props, and sounds all sync live to everyone connected. On Steam it runs over Steam's own multiplayer backend, so there's no port forwarding to mess with. The itch.io version connects over direct IP instead, which works great on LAN, and can work over the internet with port forwarding, but that's not always possible depending on your network and ISP.</p>
+
+                <h2>Technical Details</h2>
+
+                <ul>
+                    <li><strong>Engine:</strong> Godot 4</li>
+                    <li><strong>Networking:</strong> Steam's multiplayer backend on Steam, ENet over direct IP on itch.io (LAN or port-forwarded)</li>
+                    <li><strong>World format:</strong> Plain-text <code>.blox</code> slabs for clipboard and library, human-readable and easy to share</li>
+                    <li><strong>Import:</strong> MagicaVoxel <code>.vox</code>, custom images (with optional heightmaps), standee tokens, and audio</li>
+                    <li><strong>Status:</strong> Still in development, there may be bugs. Planned release September 2026</li>
+                </ul>
+
+                <!--
+                ═══════════════════════════════════════════════════════════
+                -->
+            </article>
+
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Image embiggen overlay -->
+    <div class="img-overlay" id="imgOverlay">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        // Simple image embiggen - click any project image to enlarge
+        const overlay = document.getElementById('imgOverlay');
+        const overlayImg = overlay.querySelector('img');
+        const projectImages = document.querySelectorAll('.project-content img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            });
+        });
+
+        // Click anywhere to close
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
