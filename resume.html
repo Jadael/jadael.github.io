@@ -141,6 +141,195 @@
             font-size: var(--size-small);
             font-style: italic;
         }
+
+        .job-note {
+            font-style: italic;
+            color: var(--color-text-dim);
+            margin-bottom: var(--space-sm);
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        /* Print: one-page single-column resume, for PDF export and ATS parsing.
+           .screen-only items are web-only detail; .print-only items are condensed print versions. */
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.4in 0.5in;
+            }
+
+            * {
+                background: none !important;
+                color: #1a1a1a !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
+            body {
+                font-family: Calibri, Arial, Helvetica, sans-serif;
+                font-size: 9.5pt;
+                line-height: 1.22;
+            }
+
+            h1, h2, .job-title, .employer-name, .skill-category h3 {
+                font-family: Calibri, Arial, Helvetica, sans-serif;
+            }
+
+            h1, h2, .employer-name {
+                color: #4b2a63 !important;
+            }
+
+            .page, .content, .panel, .resume-content {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                border: none;
+                min-height: 0;
+            }
+
+            .back-link, .screen-only, .section-divider {
+                display: none !important;
+            }
+
+            .print-only {
+                display: inline;
+            }
+
+            li.print-only {
+                display: list-item;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .resume-header {
+                margin-bottom: 5pt;
+            }
+
+            h1 {
+                font-size: 22pt;
+                font-weight: bold;
+                letter-spacing: 0.5pt;
+                margin: 0;
+            }
+
+            .resume-contact {
+                font-size: 9pt;
+                margin-bottom: 4pt !important;
+            }
+
+            .resume-intro {
+                font-size: 9.5pt;
+                line-height: 1.22;
+                max-width: none;
+                margin: 0;
+                text-align: left;
+            }
+
+            .resume-section {
+                margin-bottom: 5pt;
+            }
+
+            .resume-section h2 {
+                font-size: 10.5pt;
+                font-weight: bold;
+                letter-spacing: 1pt;
+                text-transform: uppercase;
+                border-bottom: 1pt solid #4b2a63;
+                padding-bottom: 1pt;
+                margin: 0 0 3pt;
+            }
+
+            .employer-card {
+                border: none;
+                padding: 0;
+                margin-bottom: 4pt;
+            }
+
+            .employer-header {
+                border: none;
+                padding: 0;
+            }
+
+            .employer-name {
+                font-size: 10.5pt;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .employer-subtitle, .job-note {
+                font-size: 9pt;
+                margin: 0 0 1pt;
+            }
+
+            .job {
+                margin-bottom: 3pt;
+            }
+
+            .job-header, .employer-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                gap: 12pt;
+                margin-bottom: 0;
+                break-after: avoid;
+            }
+
+            .job-dates, .employer-subtitle {
+                white-space: nowrap;
+            }
+
+            .job-title {
+                font-size: 9.5pt;
+            }
+
+            .job-dates {
+                font-size: 9pt;
+            }
+
+            .job-responsibilities {
+                margin: 0;
+                padding-left: 12pt;
+            }
+
+            .job-responsibilities li {
+                margin-bottom: 0;
+            }
+
+            .inline-list {
+                padding-left: 0;
+                list-style: none;
+            }
+
+            .inline-list li {
+                display: inline;
+            }
+
+            .inline-list li + li::before {
+                content: " · ";
+            }
+
+            .skill-category {
+                margin-bottom: 1pt;
+            }
+
+            .skill-category h3 {
+                display: inline;
+                font-size: 9.5pt;
+            }
+
+            .skill-category h3::after {
+                content: ": ";
+            }
+
+            .skill-list {
+                display: inline;
+                line-height: 1.22;
+            }
+        }
     </style>
 </head>
 <body>
@@ -151,141 +340,90 @@
             <article class="panel">
                 <div class="resume-header">
                     <h1>T. Hill-Hand</h1>
-                    <div style="margin-bottom: var(--space-md);">
+                    <div class="screen-only" style="margin-bottom: var(--space-md);">
                         <a href="docs/T_Hill-Hand_Resume_2026.pdf">Print friendly / PDF</a>
                     </div>
-                    <div style="margin-bottom: var(--space-md);">
+                    <div class="resume-contact" style="margin-bottom: var(--space-md);">
+                        Las Vegas, NV ·
+                        <span class="print-only">702-416-2073 ·</span>
                         <a href="mailto:hillhand&#64;gmail&#46;com">hillhand&#64;gmail&#46;com</a> ·
-                        <a href="https://www.linkedin.com/in/t-hill-hand-358b3631/">LinkedIn</a> ·
-                        <a href="https://github.com/Jadael">GitHub</a> ·
-                        <a href="https://www.youtube.com/@HillHand">YouTube</a>
+                        <a href="https://hillhand.com">hillhand.com</a> ·
+                        <a href="https://www.linkedin.com/in/t-hill-hand-358b3631/">linkedin.com/in/t-hill-hand-358b3631</a> ·
+                        <a href="https://github.com/Jadael">github.com/Jadael</a>
                     </div>
                     <p class="resume-intro">
-                        My goal is sustainable, healthy work towards universally accessible knowledge and artifacts that will still be of value to people living ten thousand years from now.
+                        I organize information so people can find what they need. For five years I alone ran a 3,000-article knowledge base and help chatbot for 10,000–20,000 employees, using library-science methods: cataloging, controlled vocabulary, scheduled review and weeding. Earlier I worked in customer escalations, reporting and training, and ran a fine-art print studio. I'd like to bring that to a library, museum, or independent bookstore or game shop.
+                    </p>
+                    <p class="resume-intro screen-only">
+                        <em>My goal is sustainable, healthy work towards universally accessible knowledge and artifacts that will still be of value to people living ten thousand years from now.</em>
                     </p>
                 </div>
-                
-                <div class="section-divider">⸸</div>
-
-                <div class="resume-section">
-                    <h2>Education and Certifications</h2>
-                    <ul>
-                        <li>Media Arts & Animation, Art Institute of Las Vegas</li>
-                        <li>Lean Six Sigma Green Belt Certification</li>
-                    </ul>
-                </div>
 
                 <div class="section-divider">⸸</div>
 
                 <div class="resume-section">
-                    <h2>Skills & Competencies</h2>
-
-                    <div class="skill-category">
-                        <h3>Knowledge Systems & Architecture</h3>
-                        <p class="skill-list">Enterprise knowledge base design and taxonomy development, content governance frameworks, search optimization, controlled vocabulary and metadata strategy</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Process & Project Management</h3>
-                        <p class="skill-list">Lean Six Sigma, stakeholder coordination, requirements gathering, workflow automation design, training development, creating actionable tools for regulatory and technical requirements</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Data & Analytics</h3>
-                        <p class="skill-list">Advanced Smartsheet, SQL queries, CSV/JSON processing, API integration, tidy data principles, data quality management</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>AI & Automation</h3>
-                        <p class="skill-list">Conversational AI (Cognigy platform), user intent management, workflow automation, cross-system orchestration</p>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Technical & Creative</h3>
-                        <p class="skill-list">Godot Engine, Blender 3D, Python scripting, HTML/CSS, markdown systems, version control, Adobe suite, video editing, game modding, procedural generation, open-source audio software development</p>
-                    </div>
-                </div>
-               
-
-                <div class="section-divider">⸸</div>
-
-                <div class="resume-section">
-                    <h2>Work Experience</h2>
+                    <h2>Experience</h2>
 
                     <div class="employer-card">
                         <div class="employer-header">
                             <div class="employer-name">Foundever (formerly Sitel Group)</div>
-                            <div class="employer-subtitle">Customer experience technology</div>
+                            <div class="employer-subtitle">Las Vegas, NV &amp; remote · 2012 – 2025</div>
                         </div>
 
                         <div class="job">
                             <div class="job-header">
-                                <div class="job-title">EverConnect Architect, North America</div>
-                                <div class="job-dates">July 2020 - October 2025</div>
+                                <div class="job-title">Project Architect: Intranet &amp; Knowledge Base, North America</div>
+                                <div class="job-dates">July 2020 – October 2025</div>
                             </div>
-                            <p style="font-style: italic; color: var(--color-text-dim); margin-bottom: var(--space-sm);">After deployment of global intranet, recruited for newly created Architect role to serve US & Canada operations (serving a peak of 20,000+ associates across 40+ locations)</p>
+                            <p class="job-note">Internal title "EverConnect Architect." Sole architect for 40–50 US and Canadian sites. The role was eliminated in a reduction in force.</p>
                             <ul class="job-responsibilities">
-                                <li>Designed and maintained intranet structure, content rules, and search for 40+ sites</li>
-                                <li>Trained 50+ content owners to manage their own pages, reducing bottlenecks</li>
-                                <li>Built Smartsheet tools that automated reporting and tracking for multiple teams</li>
-                                <li>Coordinated projects across departments, clients, and regions — often the one person who knew how all the pieces fit together</li>
+                                <li>Ran a collection of about 3,000 articles: taxonomy, audience permissions, metadata and a recurring review cycle.</li>
+                                <li>Designed the "Directory," a Smartsheet catalog that assigned a subject-matter expert to every article. It sent automated reviews every 7 to 300 days using a MUSTIE-based checklist, kept an audit history, and produced the intranet index (HTML), chatbot topics (JSON) and AI reference files (Markdown).</li>
+                                <li>Owned the North America Cognigy chatbot (about 1,000 users a day, mostly HR questions about timecards, PTO and leave). Designed it like a reference desk that points people to the current official article instead of answering from memory.</li>
+                                <li class="screen-only">Built the chatbot's topics as a hierarchy people could browse up, down and sideways. Tuned it to offer its top 3 guesses, plus a "start from the top" option, when it wasn't sure what someone meant.</li>
+                                <li>Recruited, trained and supported 30–100 content "Creators" (HR, support staff, managers, subject-matter experts). Ran outreach that replaced separate site-by-site SharePoints and reached an estimated 80% monthly active use.</li>
+                                <li class="print-only">Built the "Dictionary" glossary, ran the region's internal ChatGPT assistant, and project-managed the Internal Communications team.</li>
+                                <li class="screen-only">Built the "Dictionary," a glossary of company and industry terms that employees contributed to and that I edited.</li>
+                                <li class="screen-only">Deployed and maintained the North America version of the company's internal ChatGPT assistant (Azure), and kept its reference material updated at least weekly.</li>
+                                <li class="screen-only">Served as de facto project manager for the North America Internal Communications &amp; Employee Engagement team (Smartsheet, Microsoft Planner, Outlook automation).</li>
                             </ul>
                         </div>
 
                         <div class="job">
                             <div class="job-header">
                                 <div class="job-title">Continuous Improvement Manager, North America</div>
-                                <div class="job-dates">September 2019 - July 2020</div>
+                                <div class="job-dates">September 2019 – July 2020</div>
                             </div>
                             <ul class="job-responsibilities">
-                                <li>Ran Lean Six Sigma projects for internal teams and client programs</li>
-                                <li>Built the department's project tracking and reporting tools from scratch</li>
-                                <li><strong>Global Intranet:</strong> Core team member from concept through deployment
-                                    <ul style="margin-top: var(--space-xs);">
-                                        <li>Reviewed vendor proposals; found that security and compliance needs ruled out off-the-shelf options</li>
-                                        <li>Shaped the information architecture and rollout plan for 90,000+ users worldwide</li>
-                                    </ul>
-                                </li>
+                                <li>Was the first member of a rebuilt Continuous Improvement team. Supported and retrained site reporting analysts on investigations, metrics and tools (BusinessObjects, Power BI, SharePoint), and served as the team's de facto project manager.</li>
+                                <li>Was one of three regional members of the global intranet design committee. Surveyed employees worldwide, evaluated vendors, and recommended an in-house build because no vendor met PCI and HIPAA requirements.</li>
+                                <li class="screen-only">Updated work-from-home deployment guides during the 2020 move to fully remote work.</li>
                             </ul>
                         </div>
 
                         <div class="job">
                             <div class="job-header">
                                 <div class="job-title">Operational Reporting Analyst, Las Vegas</div>
-                                <div class="job-dates">April 2013 - September 2019</div>
+                                <div class="job-dates">April 2013 – September 2019</div>
                             </div>
                             <ul class="job-responsibilities">
-                                <li>Handled financial planning, data logistics, and internal communications for the site</li>
-                                <li>Managed and mentored technical staff across workforce management, quality assurance, and reporting</li>
-                                <li>Built automated reports and dashboards that replaced hours of manual work</li>
+                                <li>Updated the daily margin tracker (revenue and cost of sales against monthly forecasts) and prepared month-end client invoices.</li>
+                                <li>Supervised the site's Quality team, Workforce team (real-time analysts) and another reporting analyst. For a time, was the only operational reporting analyst left in North America.</li>
+                                <li>Built automated reports in Excel, Access and SQL, and ran internal communications and the SharePoint site for the Las Vegas site.</li>
+                                <li class="screen-only">For clients served only from Las Vegas, built the final invoice for managers to review. For clients shared with other sites, provided the Las Vegas data for a combined invoice.</li>
+                                <li class="screen-only">Became a known resource for reporting and tools help at every level, including colleagues in other countries.</li>
                             </ul>
                         </div>
 
                         <div class="job">
                             <div class="job-header">
-                                <div class="job-title">Special Customer Support, Retail Client</div>
-                                <div class="job-dates">June 2012 - April 2013</div>
+                                <div class="job-title">Special Customer Support (Tier 3), Beats by Dre</div>
+                                <div class="job-dates">June 2012 – April 2013</div>
                             </div>
                             <ul class="job-responsibilities">
-                                <li>Resolved complex escalated customer issues including Better Business Bureau complaints, lost shipments, injury claims, and executive correspondence</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="employer-card">
-                        <div class="employer-header">
-                            <div class="employer-name">Freelance</div>
-                            <div class="employer-subtitle">Graphic design & art</div>
-                        </div>
-
-                        <div class="job">
-                            <div class="job-header">
-                                <div class="job-title">Graphic Designer & Artist</div>
-                                <div class="job-dates">January 2009 - June 2012</div>
-                            </div>
-                            <ul class="job-responsibilities">
-                                <li>Logos, branding, print materials, web graphics, illustration, and digital art</li>
-                                <li>Worked directly with clients from concept through final delivery</li>
+                                <li>Joined Beats by Dre's customer service program at launch. Wrote guides for other agents and improved how the team used the Oracle RightNow CRM, which led to becoming the program's first Tier 3 agent.</li>
+                                <li>Handled injury claims (including spotting fraudulent ones), Better Business Bureau complaints, client escalations, lost-package investigations and the most difficult repeat customers.</li>
+                                <li class="screen-only">Was the designated contact for one customer who called every day for four months, so other agents didn't have to take those calls.</li>
                             </ul>
                         </div>
                     </div>
@@ -293,40 +431,74 @@
                     <div class="employer-card">
                         <div class="employer-header">
                             <div class="employer-name">Art From the Heart</div>
-                            <div class="employer-subtitle">Art, printing & photography</div>
+                            <div class="employer-subtitle">Art studio &amp; print shop · Las Vegas, NV</div>
                         </div>
-
                         <div class="job">
                             <div class="job-header">
                                 <div class="job-title">Printer, Photographer, Designer</div>
-                                <div class="job-dates">January 2006 - January 2009</div>
+                                <div class="job-dates">January 2006 – January 2009</div>
                             </div>
                             <ul class="job-responsibilities">
-                                <li>Giclee (inkjet on canvas) reproductions of paintings for artists and galleries</li>
-                                <li>Ran the whole operation solo: client work, photography, color matching, and printing</li>
+                                <li>Ran the studio's print shop as its only employee. Photographed original paintings (Canon 5D, softbox lighting, color reference targets) and produced fine-art giclée reproductions on a wide-format printer.</li>
+                                <li>Developed the color-matching workflow (color profiles for each material, calibrated monitor), and designed cards for local artists.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="employer-card">
                         <div class="employer-header">
-                            <div class="employer-name">NWTEC</div>
-                            <div class="employer-subtitle">Residential Construction</div>
+                            <div class="employer-name">Other Experience</div>
                         </div>
-
-                        <div class="job">
-                            <div class="job-header">
-                                <div class="job-title">Crew Leader</div>
-                                <div class="job-dates">December 2005 - December 2006</div>
-                            </div>
-                            <ul class="job-responsibilities">
-                                <li>Led crew of 2-4 installing SWPPP erosion control and drainage on active construction sites</li>
-                            </ul>
-                        </div>
+                        <ul class="job-responsibilities inline-list">
+                            <li>Freelance Graphic Designer (2009–2012)</li>
+                            <li>Cashier, Shell (2011–2013)</li>
+                            <li>Crew Leader, NWTEC (2005–2006)</li>
+                            <li>Line Cook, Timbers (2003–2005)</li>
+                        </ul>
                     </div>
                 </div>
 
+                <div class="section-divider">⸸</div>
 
+                <div class="resume-section">
+                    <h2>Projects &amp; Community</h2>
+                    <ul class="job-responsibilities">
+                        <li><strong><a href="terrablox.html">Terrablox</a></strong>: a voxel-based virtual tabletop for roleplaying games, built solo in Godot 4 and now in Steam review.</li>
+                        <li><strong><a href="tmt.html">TMT (T's Musical Tools)</a></strong>: open-source modules for the VCV Rack modular synthesizer, with about 4,000 downloads. Includes <a href="rhythml.html">RhythML</a>, a plain-text sequencing notation I designed and documented.</li>
+                        <li>Organized a weekly fighting-game meetup, and have moderated online communities for years. Lifelong reader of science fiction, fantasy and nonfiction. I own about 100 board games and play Magic: The Gathering, Netrunner and Warhammer.</li>
+                    </ul>
+                </div>
+
+                <div class="section-divider">⸸</div>
+
+                <div class="resume-section">
+                    <h2>Skills &amp; Education</h2>
+
+                    <div class="skill-category">
+                        <h3>Information</h3>
+                        <p class="skill-list">Cataloging and metadata, taxonomy and controlled vocabulary, collection review and weeding (MUSTIE), reference and wayfinding, content management, documentation</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>People</h3>
+                        <p class="skill-list">Customer service and escalations, training and onboarding, supervising, community outreach and events</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Creative</h3>
+                        <p class="skill-list">Photography, color management, large-format printing, print layout, graphic design, video editing</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <p class="skill-list">Smartsheet (advanced), Excel, SharePoint, Power BI, SQL, RightNow CRM, Cognigy, ChatGPT, Photoshop, Illustrator, HTML/CSS, Python</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Education</h3>
+                        <p class="skill-list">Media Arts &amp; Animation coursework (3.5 years), Art Institute of Las Vegas · Lean Six Sigma Green Belt (2019)</p>
+                    </div>
+                </div>
             </article>
 
             <a href="index.html" class="back-link">Back to Home</a>
